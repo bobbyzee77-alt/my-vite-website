@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Color tokens — deep Islamic green + warm gold, grounded in the brief's palette */
+  --color-ink: #14261B;
+  --color-green-950: #0A2818;
+  --color-green-900: #0F5132;
+  --color-green-800: #146339;
+  --color-green-700: #1B7A48;
+  --color-gold-300: #E7CE9A;
+  --color-gold-400: #D9B978;
+  --color-gold-500: #C8A45D;
+  --color-gold-600: #AD874A;
+  --color-ivory: #FBF8F2;
+  --color-sand: #F1EAD9;
+  --color-sand-dark: #E7DCC0;
+  --color-line: #E3D9C2;
+
+  --font-display: "Fraunces", "Georgia", serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --shadow-soft: 0 12px 40px -12px rgba(15, 81, 50, 0.18);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-ivory);
+  color: var(--color-ink);
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+}
+
+/* visible keyboard focus */
+:focus-visible {
+  outline: 2px solid var(--color-gold-500);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.container-page {
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
